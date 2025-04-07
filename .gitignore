@@ -1,3 +1,6 @@
-logs/
+# .gitignore
 node_modules/
 .env
+logs/
+*.log
+data/
