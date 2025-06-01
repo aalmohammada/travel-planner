@@ -5,6 +5,12 @@ const authRoutes = require('./routes/authRoutes');
 const itineraryRoutes = require('./routes/itineraryRoutes');
 const { errorHandler } = require('./middlewares/errorHandler');
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true, // wenn du JWTs/Cookies nutzt
+}));
+
 const app = express();
 app.use(express.json());
 app.use(cors());
